@@ -44,6 +44,7 @@
     background-color: rgb(214, 230, 238);
     display: flex;
     justify-content: space-between; 
+
 }
 
 .encabezado h1 {
@@ -78,6 +79,7 @@
     grid-area: main;
     background-color: rgb(187, 222, 235);
     display: inline-block;
+    background-image:linear-gradient(to right, rgb(255, 255, 255), rgb(187, 222, 235));
 }
 
 .div1 h2{
@@ -149,6 +151,11 @@
     padding: 10px;
 }
 
+.animaciones{
+    transition: 3s;
+    transition-duration: infinite;
+    transform: rotateY(60deg);   
+}
 
 @media only screen and (min-width: 0px) and (max-width:767px) {
 
