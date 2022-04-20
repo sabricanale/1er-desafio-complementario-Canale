@@ -154,7 +154,7 @@
 .animaciones{
     transition: 3s;
     transition-duration: infinite;
-    transform: rotateY(60deg);   
+    transform: rotateY(360deg);   
 }
 
 @media only screen and (min-width: 0px) and (max-width:767px) {
