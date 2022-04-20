@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 600px 600px auto;
+    grid-template-areas: "nav    nav    nav    nav"
+                         "header header header header"
+                         "main   main   main   main"
+                         "footer footer footer footer";
+}
+
+.navegador{
+    grid-area: nav;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap; /*puedan estar en el mismo eje*/
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navegador img{
+    height: 100%;
+    justify-content: right;  
+}
+
+.navegador ul{
+    display:flex;
+    list-style: none;
+    align-items: flex-end;
+    padding: 15px; 
+}
+
+.navegador ul li{
+    padding: 10px;
+    font-family: "Josefin Sans";
+}
+
+.encabezado{
+    grid-area: header;
+    background-color: rgb(214, 230, 238);
+    display: flex;
+    justify-content: space-between; 
+}
+
+.encabezado h1 {
+    font-family: "Oranienbaum";
+    padding: 150px;
+    font-size: 40px;
+    transform: rotateY(360deg);
+    transition: transform 5s;
+    animation-delay: 5s;          
+}
+
+.encabezado div{
+    padding: 55px;
+    width: 600px;
+}
+
+.encabezado div p{
+    font-family: "Josefin Sans";
+    font-size: 120%;
+    line-height: 2.2; /*interlineado*/
+}
+
+.encabezado div button{
+    font-family: "Oranienbaum";
+    background-color:rgb(241, 190, 148);
+    width: 140px;
+    height: 50px;
+    font-size: 150%;
+}
+
+.principal{
+    grid-area: main;
+    background-color: rgb(187, 222, 235);
+    display: inline-block;
+}
+
+.div1 h2{
+    height: 50px;
+    margin: 20px;
+    padding-left: 500px;
+    font-family: "Oranienbaum";
+    font-size: 30px;
+}
+
+.div1 p{
+    height: 30px;
+    margin: 20px;
+    padding-left: 200px;
+    font-family: "Josefin Sans";
+}
+
+.sector{
+    display: flex;
+    margin: 10px;
+}
+  
+.virtual img{
+      height: 300px;
+      padding: 30px;
+}
+
+.virtual a{
+      padding-left: 200px;
+}
+   
+.presencial img{
+      height: 300px;
+      margin: 30px;
+      padding-left: 200px;
+}
+
+.presencial a{
+    padding: 480px; 
+} 
+
+.pieDePagina{
+    grid-area: footer;
+    background-color: rgb(241, 190, 148);
+    font-family: "Josefin Sans";
+    display:inline;
+    padding: 50px;
+}
+
+.pieDePagina p{
+    padding-left: 450px;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.img1{
+    padding: 10px;
+}
+
+.img2{
+    padding: 10px;
+}
+
+.img3{
+    padding: 10px;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width:767px) {
+
+.contenedor{
+    grid-template-rows: 100px 400px 1000px auto;
+    grid-template-areas: "nav    nav    nav    nav"
+                         "header header header header"
+                         "main   main   main   main"
+                         "footer footer footer footer";
+}
+
+.principal{
+        display: flex;
+        flex-direction: column;
+        
+}
+
+.div1 h2{        
+        padding-left: 200px;
+        font-size: 25px;
+}
+    
+.div1 p{     
+        padding-left: 90px;
+        font-family: "Josefin Sans";
+}
+ 
+.encabezado{      
+        display:inline;      
+}
+
+.encabezado div{
+        padding: 15px;
+}
+
+.encabezado h1 {        
+        padding: 40px;
+        font-size: 30px;                
+}
+
+.encabezado div p{       
+        font-size: 120%;
+        line-height: 1.2; /*interlineado*/
+}
+
+.encabezado div button{
+        width: 100px;
+        height: 40px;
+        font-size: 110%;
+}
+
+.sector{
+        display: flex;
+        flex-direction: column;     
+}
+
+.virtual img{    
+        padding-left: 150px;
+}
+
+.virtual a{
+        padding: 350px; 
+}
+
+.presencial img{
+        padding-left: 80px;              
+}
+
+.presencial a{
+      padding: 350px; 
+} 
+
+.pieDePagina p{
+    padding-left: 160px;
+}
+
+}
